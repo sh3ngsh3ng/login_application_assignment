@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {useHistory} from "react-router-dom"
 import axios from 'axios'
+import Spinner from "react-bootstrap/Spinner"
+
 
 export default function LoadingPage() {
     const [apiLoaded, setApiLoaded] = useState(false)
@@ -25,7 +27,9 @@ export default function LoadingPage() {
 
     return (
         <React.Fragment>
-            Put loading image/spinner here
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
         </React.Fragment>
     )
 }

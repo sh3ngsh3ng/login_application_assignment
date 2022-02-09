@@ -1,4 +1,6 @@
 import React from 'react'
+import NavBar from '../components/NavBar'
+import SignUpForm from '../components/SignUpForm'
 
 
 
@@ -7,7 +9,8 @@ export default function SignUpPage(){
 
     return (
         <React.Fragment>
-            Sign up page....
+            <NavBar/>
+            <SignUpForm/>
         </React.Fragment>
     )
 }

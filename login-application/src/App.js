@@ -5,6 +5,8 @@ import LoadingPage from './pages/LoadingPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage'
 import LandingPage from './pages/LandingPage'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
