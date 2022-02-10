@@ -37,8 +37,8 @@ export default function NavBar() {
             </Offcanvas>
             <Navbar>
                 <Container>
-                    <Navbar.Brand href="/">
-                        <img id="nav-bar-logo"  src={logo}/>
+                    <Navbar.Brand href={checkIfLogin() ? "/home": "/"}>
+                        <img id="nav-bar-logo" src={logo}/>
                     </Navbar.Brand>
 
 
