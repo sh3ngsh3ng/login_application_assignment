@@ -1,0 +1,68 @@
+#login-form-div {
+    padding: 20px;
+}
+
+#login-form {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #e1e3e7;
+    border-radius: 10px;
+    box-shadow:0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+#login-form-brand-logo-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.form-brand-logo {
+    height: 60px;
+}
+
+#login-username-div {
+    margin-bottom: 10px;
+}
+
+#login-password-div {
+    margin-bottom: 15px;
+}
+
+#login-btn-div {
+    margin-bottom: 20px;
+}
+
+#login-btn {
+    width: 100%;
+    background: #1877f2;
+}
+
+#sign-up-btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+#sign-up-btn {
+    width: 60%;
+    background: #42b72a;
+}
+
+#sign-up-prompt-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+#sign-up-prompt {
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+@media only screen and (min-width: 768px) {
+    div#login-form{
+        margin-right: 150px;
+        margin-left: 150px;
+        padding: 30px;
+    }
+}
