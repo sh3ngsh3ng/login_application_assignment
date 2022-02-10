@@ -24,15 +24,7 @@ export default function LoginForm() {
         })
     }
 
-    const showAlert = () => toast.error("Invalid username or password", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        })
+    
 
     const submitForm = async (form) => {
         let result = await axios.post(API_URL + "login", {
@@ -42,6 +34,15 @@ export default function LoginForm() {
             localStorage.setItem("accessToken", result.data.accessToken)
             history.push("/home")
         } else {
+            const showAlert = () => toast.error("Invalid username or password", {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
             showAlert()
         }
     }
