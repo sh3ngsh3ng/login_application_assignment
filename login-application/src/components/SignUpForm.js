@@ -4,6 +4,8 @@ import {useHistory} from "react-router-dom"
 import axios from 'axios'
 import "./SignUpForm.css"
 import logo from "../images/login-app-logo.png"
+import Select from "react-select"
+import makeAnimated from "react-select/animated"
 
 export default function SignUpForm() {
 
@@ -15,7 +17,8 @@ export default function SignUpForm() {
         "username": "",
         "email": "",
         "password": "",
-        "confirm_password": ""
+        "confirm_password": "",
+        "role": ""
     })
 
 
@@ -37,6 +40,12 @@ export default function SignUpForm() {
         }
     }
 
+    let roleOptions = [
+        {value: "client", label: "Client"},
+        {value: "employee", label: "Employee"},
+        {value: "manager", label: "Manager"}
+    ]
+
 
     return (
         <React.Fragment>
@@ -56,6 +65,9 @@ export default function SignUpForm() {
                     </div>
                     <div class="sign-up-input-div">
                         <input id="emailInput" name="email" placeholder="Enter Email"className="form-control" value={form.email} onChange={onUpdateFormField}/>
+                    </div>
+                    <div class="sign-up-input-div">
+                        <Select placeholder={"Choose a role"} options={roleOptions} components={makeAnimated()} value={roleOptions.filter((opt) => opt.value === form.role)} onChange={(evt) => setForm({...form, "role": evt.value})}/>
                     </div>
                     <div class="sign-up-input-div">
                         <button id="sign-up-submit-btn" className="btn btn-success" onClick={() => submitForm(form)}>Submit</button>
