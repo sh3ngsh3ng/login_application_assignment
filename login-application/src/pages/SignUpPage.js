@@ -9,8 +9,11 @@ export default function SignUpPage(){
 
     return (
         <React.Fragment>
-            <NavBar/>
-            <SignUpForm/>
+            <div id ="sign-up-page">
+                <NavBar/>
+                <SignUpForm/>
+            </div>
+            
         </React.Fragment>
     )
 }

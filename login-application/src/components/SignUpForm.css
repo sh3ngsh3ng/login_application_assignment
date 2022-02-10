@@ -39,7 +39,7 @@
     margin-left: 5px;
 }
 
-@media only screen and (min-width: 768ox) {
+@media only screen and (min-width: 768px) {
     div#sign-up-form {
         margin-right: 100px;
         margin-left: 100px;
@@ -47,6 +47,13 @@
     }
 
 
+}
 
 
+@media only screen and (min-width: 1440px) {
+    div#sign-up-form{
+        margin-right: 350px;
+        margin-left: 350px;
+        padding: 50px;
+    }
 }

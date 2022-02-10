@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+#login-page {
+  height: 100vh;
+  background-image: url("./background-image-dxc.jpg");
+  background-size: cover;
+}
+
+#sign-up-page {
+  height: 100vh;
+  background-image: url("./background-image-dxc.jpg");
+  background-size: cover;
+}
