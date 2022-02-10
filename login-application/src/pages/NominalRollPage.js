@@ -2,10 +2,11 @@ import React, {useEffect, useState} from "react"
 import NavBar from "../components/NavBar"
 import axios from "axios"
 import { sendJwt } from "../util"
+import { useHistory } from "react-router-dom"
 
 
 export default function NominalRollPage() {
-
+    let history = useHistory()
 
     let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
 
@@ -44,6 +45,9 @@ export default function NominalRollPage() {
 
                         </tbody>
                     </table>
+                </div>
+                <div style={{"display": "flex", "justifyContent": "center"}}>
+                    <button className="btn btn-secondary" onClick={() => history.push("/home")}>Back</button>
                 </div>
             </React.Fragment>
         )

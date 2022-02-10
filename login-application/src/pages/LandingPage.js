@@ -21,18 +21,18 @@ export default function LandingPage() {
                             <div id="id-photo-div">
                                 <img class="id-photo" src={idPhoto}/>
                             </div>
-                            <div>
+                            <div className="id-card-field">
                                 <span>Username: {user.username}</span>
                             </div>
-                            <div>
+                            <div className="id-card-field">
                                 <span>Email: {user.email}</span>
                             </div>
-                            <div>
+                            <div className="id-card-field">
                                 <span>Role: {user.role}</span>
                             </div>
-                            <div>
+                            <div className="id-card-field" style={{"display": "flex", "justifyContent": "center"}}>
                                 {user.role == "manager" ? 
-                                <button className="btn btn-primary" onClick={() => history.push("/list")}>View Nominal Roll</button>
+                                <button className="btn btn-success" onClick={() => history.push("/list")}>View Nominal Roll</button>
                                 : null
                                 }
                             </div>

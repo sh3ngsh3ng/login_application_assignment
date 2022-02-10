@@ -4,9 +4,12 @@
 }
 
 #id-card-div {
-    border: 1px black solid;
-    border-radius: 10px;
+    padding: 20px!important;
+    background-color: white;
     padding: 10px;
+    border: 1px solid #e1e3e7;
+    border-radius: 10px;
+    box-shadow:0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 
@@ -18,4 +21,8 @@
 
 .id-photo {
     height: 60px;
+}
+
+.id-card-field {
+    margin-bottom: 10px;
 }
