@@ -1,0 +1,21 @@
+#landing-page-div {
+    display: flex;
+    justify-content: center;
+}
+
+#id-card-div {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+#id-photo-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.id-photo {
+    height: 60px;
+}

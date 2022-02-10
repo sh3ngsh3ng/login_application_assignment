@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginForm from '../components/LoginForm'
 import NavBar from '../components/NavBar'
-import "./LoginPage.css"
+
 
 
 export default function LoginPage() {
