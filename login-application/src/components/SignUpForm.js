@@ -32,6 +32,9 @@ export default function SignUpForm() {
             form
         })
         console.log(result.data.message)
+        if (result.data.success) {
+            history.push("/login")
+        }
     }
 
 

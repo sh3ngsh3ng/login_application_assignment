@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useHistory} from "react-router-dom"
 import axios from 'axios'
 import Spinner from "react-bootstrap/Spinner"
+import { checkIfLogin } from '../components/util'
 
 
 export default function LoadingPage() {
@@ -20,7 +21,11 @@ export default function LoadingPage() {
 
     useEffect(() => {
         setTimeout(function() {
-            history.push("/login")
+            if (checkIfLogin()) {
+                history.push("/home")
+            } else {
+                history.push("/login")
+            }
         }, 3000)
     }, [apiLoaded])
 

@@ -1,0 +1,31 @@
+.navbar {
+    border-radius: 0px 0px 10px 10px;
+    /* background-color: #adabab; */
+    background-color: #397bbd!important;
+    margin-bottom: 10px;
+}
+
+#nav-bar-logo {
+    height: 50px;
+}
+
+#logout-confirmation-box {
+    width: 100%!important;
+}
+
+#logout-confirmation-text {
+    text-align: center;
+    background-color: rgba(216, 201, 201, 0.562);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+#logout-btns-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.logout-btns {
+    width: 50px;
+}

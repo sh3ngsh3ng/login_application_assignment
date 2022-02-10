@@ -2,8 +2,11 @@ import React, {useState} from "react"
 import {useHistory} from "react-router-dom"
 import logo from "../images/login-app-logo.png"
 import "./LoginForm.css"
+import axios from "axios"
 
 export default function LoginForm() {
+
+    let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
 
     let history = useHistory()
 
@@ -17,6 +20,19 @@ export default function LoginForm() {
             ...form,
             [e.target.name]: e.target.value
         })
+    }
+
+    const submitForm = async (form) => {
+        let result = await axios.post(API_URL + "login", {
+            form
+        })
+        if (result.data.message == "success") {
+            localStorage.setItem("accessToken", result.data.accessToken)
+            history.push("/home")
+        } else {
+            // display error in login
+            history.push("/login")
+        }
     }
 
     return (
@@ -34,7 +50,7 @@ export default function LoginForm() {
             </div>
 
             <div id="login-btn-div">
-                {/* <btn id="login-btn" className="btn btn-success" onClick={() => submitForm(form)}>Login</btn> */}
+                <btn id="login-btn" className="btn btn-success" onClick={() => submitForm(form)}>Login</btn>
             </div>
             <div id="sign-up-prompt-div">
                 <span id="sign-up-prompt">Don't have an account?</span>
