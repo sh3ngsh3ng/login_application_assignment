@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom"
 import axios from 'axios'
 import Spinner from "react-bootstrap/Spinner"
 import { checkIfLogin } from '../util'
-
+import "./LoadingPage.css"
 
 export default function LoadingPage() {
     const [apiLoaded, setApiLoaded] = useState(false)
@@ -15,9 +15,10 @@ export default function LoadingPage() {
         async function checkApiLive() {
             let response = await axios.get(API_URL)
             if (response.data.live) {
-                setTimeout(function(){
-                    setApiLoaded(true)
-                }, 3000)
+                // setTimeout(function(){
+                //     setApiLoaded(true)
+                // }, 3000)
+                setApiLoaded(true)
             }
         }
         checkApiLive()
@@ -32,9 +33,17 @@ export default function LoadingPage() {
 
     return (
         <React.Fragment>
-            <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>
+            
+
+            <div id="load-div">
+                <div id="load-div-item">
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+                <p>Booting up application...</p>
+                </div>
+            </div>
+            
         </React.Fragment>
     )
 }
