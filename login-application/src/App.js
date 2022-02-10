@@ -5,6 +5,7 @@ import LoadingPage from './pages/LoadingPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage'
 import LandingPage from './pages/LandingPage'
+import NominalRollPage from "./pages/NominalRollPage"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -32,6 +33,13 @@ function App() {
           <Route exact path="/home">
             <LandingPage />
           </Route>
+
+
+          {/* Nominal Roll Page */}
+          <Route exact path="/list">
+            <NominalRollPage />
+          </Route>
+
         </Switch>
       </Router>
     </React.Fragment>

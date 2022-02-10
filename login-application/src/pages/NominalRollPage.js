@@ -1,0 +1,65 @@
+import React, {useEffect, useState} from "react"
+import NavBar from "../components/NavBar"
+import axios from "axios"
+import { sendJwt } from "../util"
+
+
+export default function NominalRollPage() {
+
+
+    let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
+
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        async function getData() {
+            let result = await axios.get(API_URL + "list", sendJwt())
+            setData(result.data)
+            console.log(result)
+        }
+        getData()
+    },[])
+
+    const renderContent = () => {
+
+        return (
+            <React.Fragment>
+                <div >
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {data.map((each) => {
+                                return <tr>
+                                    <td>{each.username}</td>
+                                    <td>{each.email}</td>
+                                    <td>{each.role}</td>
+                                </tr>
+                            })}
+
+                        </tbody>
+                    </table>
+                </div>
+            </React.Fragment>
+        )
+
+
+    }
+
+
+    return (
+        <React.Fragment>
+            <NavBar/>
+            {renderContent()}
+        </React.Fragment>
+    )
+}
+
+
+
+

@@ -25,6 +25,12 @@ export default function LandingPage() {
                             <div>
                                 <span>Role: {user.role}</span>
                             </div>
+                            <div>
+                                {user.role == "manager" ? 
+                                <button className="btn btn-primary" onClick={() => history.push("/list")}>View Nominal Roll</button>
+                                : null
+                                }
+                            </div>
                         </div>
                         {/* end of ID Card */}
                     </div>

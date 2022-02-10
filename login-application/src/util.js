@@ -19,3 +19,12 @@ export const getUserDetails = () => {
         return null
     }
 }
+
+export const sendJwt = () => {
+    return {
+        "headers": {
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        }
+    }
+}
+
