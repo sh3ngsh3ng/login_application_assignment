@@ -11,7 +11,7 @@ export default function SignUpForm() {
 
     let history = useHistory()
 
-    let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
+    let API_URL = "https://ys-dxc-loginapp.herokuapp.com/"
 
     const [form, setForm] = useState({
         "username": "",

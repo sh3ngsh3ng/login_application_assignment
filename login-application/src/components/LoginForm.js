@@ -9,7 +9,7 @@ import language from "./language.json"
 
 export default function LoginForm() {
 
-    let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
+    let API_URL = "https://ys-dxc-loginapp.herokuapp.com/"
 
     let history = useHistory()
 

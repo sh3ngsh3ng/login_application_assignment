@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom"
 export default function NominalRollPage() {
     let history = useHistory()
 
-    let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
+    let API_URL = "https://ys-dxc-loginapp.herokuapp.com/"
 
     const [data, setData] = useState([])
 

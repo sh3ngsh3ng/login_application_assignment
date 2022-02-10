@@ -10,7 +10,7 @@ export default function LoadingPage() {
     const [count, setCount] = useState(0)
     let history = useHistory()
 
-    let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
+    let API_URL = "https://ys-dxc-loginapp.herokuapp.com/"
 
     useEffect(() => {
         async function checkApiLive() {
