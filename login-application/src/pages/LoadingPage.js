@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useHistory} from "react-router-dom"
 import axios from 'axios'
 import Spinner from "react-bootstrap/Spinner"
-import { checkIfLogin } from '../components/util'
+import { checkIfLogin } from '../util'
 
 
 export default function LoadingPage() {
@@ -14,19 +14,19 @@ export default function LoadingPage() {
     useEffect(() => {
         async function checkApiLive() {
             let response = await axios.get(API_URL)
-            setApiLoaded(response.data.live)
+            if (response.data.live) {
+                setTimeout(function(){
+                    setApiLoaded(true)
+                }, 3000)
+            }
         }
         checkApiLive()
     },[])
 
     useEffect(() => {
-        setTimeout(function() {
-            if (checkIfLogin()) {
-                history.push("/home")
-            } else {
-                history.push("/login")
-            }
-        }, 3000)
+        if (apiLoaded) {
+            history.push("/login")
+        }
     }, [apiLoaded])
 
 

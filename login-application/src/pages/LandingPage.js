@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
-import { checkIfLogin } from '../components/util'
+import { checkIfLogin, getUserDetails } from '../util'
 import { useHistory } from 'react-router-dom'
 
 export default function LandingPage() {
@@ -9,7 +9,27 @@ export default function LandingPage() {
 
     const renderContent = () => {
         if (checkIfLogin()) {
-            return <h1>You are logged In</h1>
+            let user = getUserDetails()
+            return (
+                <React.Fragment>
+                    <div>
+                        <h1>ID Card</h1>
+                        {/* start of ID Card */}
+                        <div>
+                            <div>
+                                <span>Username: {user.username}</span>
+                            </div>
+                            <div>
+                                <span>Email: {user.email}</span>
+                            </div>
+                            <div>
+                                <span>Role: {user.role}</span>
+                            </div>
+                        </div>
+                        {/* end of ID Card */}
+                    </div>
+                </React.Fragment>
+            )
         } else {
             history.push("/login")
         }

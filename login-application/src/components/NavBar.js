@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Navbar, Container, Offcanvas, Nav} from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
-import { checkIfLogin } from './util'
+import { checkIfLogin } from '../util'
 import "./NavBar.css"
 import logo from "../images/login-app-logo.png"
 
