@@ -7,6 +7,7 @@ import "./LoadingPage.css"
 
 export default function LoadingPage() {
     const [apiLoaded, setApiLoaded] = useState(false)
+    const [count, setCount] = useState(0)
     let history = useHistory()
 
     let API_URL = "https://3000-sh3ngsh3ng-loginapplicat-h17zq07u389.ws-us31.gitpod.io/"
@@ -15,14 +16,15 @@ export default function LoadingPage() {
         async function checkApiLive() {
             let response = await axios.get(API_URL)
             if (response.data.live) {
-                // setTimeout(function(){
-                //     setApiLoaded(true)
-                // }, 3000)
                 setApiLoaded(true)
             }
         }
         checkApiLive()
-    },[])
+        setTimeout(function() {
+            setCount(count+1)
+        }, 2000)
+    }, [count])
+
 
     useEffect(() => {
         if (apiLoaded) {
