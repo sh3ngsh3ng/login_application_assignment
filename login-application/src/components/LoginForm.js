@@ -3,6 +3,8 @@ import {useHistory} from "react-router-dom"
 import logo from "../images/login-app-logo.png"
 import "./LoginForm.css"
 import axios from "axios"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function LoginForm() {
 
@@ -22,6 +24,16 @@ export default function LoginForm() {
         })
     }
 
+    const showAlert = () => toast.error("Invalid username or password", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        })
+
     const submitForm = async (form) => {
         let result = await axios.post(API_URL + "login", {
             form
@@ -30,13 +42,23 @@ export default function LoginForm() {
             localStorage.setItem("accessToken", result.data.accessToken)
             history.push("/home")
         } else {
-            // display error in login
-            history.push("/login")
+            showAlert()
         }
     }
 
     return (
         <React.Fragment>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
             <div id="login-form-div" className="container">
             <div id="login-form">
             <div id="login-form-brand-logo-div">
