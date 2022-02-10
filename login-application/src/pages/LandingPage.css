@@ -12,7 +12,6 @@
     box-shadow:0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-
 #id-photo-div {
     display: flex;
     justify-content: center;
@@ -25,4 +24,11 @@
 
 .id-card-field {
     margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    #id-card-div {
+        padding: 40px!important;
+
+    }
 }

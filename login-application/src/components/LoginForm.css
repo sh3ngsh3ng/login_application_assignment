@@ -67,6 +67,14 @@
     }
 }
 
+@media only screen and (min-width: 1024px) {
+    div#login-form{
+        margin-right: 200px;
+        margin-left: 200px;
+        padding: 40px;
+    }
+}
+
 @media only screen and (min-width: 1440px) {
     div#login-form{
         margin-right: 350px;

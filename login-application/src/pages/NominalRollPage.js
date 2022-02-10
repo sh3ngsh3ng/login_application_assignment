@@ -52,9 +52,7 @@ export default function NominalRollPage() {
             </React.Fragment>
         )
 
-
     }
-
 
     return (
         <React.Fragment>
