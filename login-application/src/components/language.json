@@ -1,0 +1,18 @@
+{
+    "en": {
+        "selectLang": "English",
+        "loginUsernameField": "Enter Username",
+        "loginPasswordField": "Password",
+        "loginButtonText": "Login",
+        "signUpButtonText": "Sign Up",
+        "signUpPrompt": "Don't have an account?"
+    },
+    "chi": {
+        "selectLang": "中文",
+        "loginUsernameField": "户名",
+        "loginPasswordField": "密码",
+        "loginButtonText": "登录",
+        "signUpButtonText": "报名",
+        "signUpPrompt": "没有帐户?"
+    }
+}
